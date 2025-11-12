@@ -1,0 +1,26 @@
+# robots.txt for La Satarah Limited
+# https://lasatarah.co.ke/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private directories (add if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
+Sitemap: https://lasatarah.co.ke/sitemap.xml
+
+# Crawl-delay (optional - uncomment if needed)
+# Crawl-delay: 1
+

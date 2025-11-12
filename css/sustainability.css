@@ -1,0 +1,882 @@
+/* Sustainability Page Specific Styles */
+
+/* Sustainability Hero Section */
+.sustainability-hero {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.sustainability-hero .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.sustainability-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sustainability-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 100%;
+}
+
+.sustainability-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.6), rgba(45, 90, 74, 0.7));
+    z-index: 2;
+    min-height: 100%;
+}
+
+.sustainability-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sustainability-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sustainability-hero-title .no-break {
+    white-space: nowrap;
+}
+
+.sustainability-hero-subtitle {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sustainability Introduction Section */
+.sustainability-intro-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.sustainability-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sustainability-intro-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+}
+
+.sustainability-intro-content .lead-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--primary-green);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Image Break Section */
+.image-break-section {
+    padding: 3rem 0;
+    background-color: var(--neutral-light);
+}
+
+.image-break-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.image-break-content img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    display: block;
+}
+
+/* Sustainability Approach Section */
+.sustainability-approach-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.approach-card {
+    background-color: var(--neutral-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--highlight);
+}
+
+.approach-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.approach-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.approach-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.approach-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.approach-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.approach-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(45, 90, 74, 0.1);
+}
+
+.approach-list li:last-child {
+    border-bottom: none;
+}
+
+.approach-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Environmental Practices Section */
+.environmental-practices-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.practices-content {
+    margin-top: 3rem;
+}
+
+.practice-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.practice-item:last-child {
+    margin-bottom: 0;
+}
+
+.practice-item.reverse {
+    direction: rtl;
+}
+
+.practice-item.reverse > * {
+    direction: ltr;
+}
+
+.practice-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.practice-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.practice-image:hover img {
+    transform: scale(1.05);
+}
+
+.practice-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.practice-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Outgrower Section */
+.outgrower-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.outgrower-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.outgrower-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.outgrower-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.85), rgba(45, 90, 74, 0.9));
+    z-index: 2;
+}
+
+.outgrower-content {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+}
+
+.outgrower-section .section-header {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    text-align: center;
+}
+
+.outgrower-section .section-header h2 {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.outgrower-section .section-header p {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.outgrower-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.outgrower-intro .lead-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.outgrower-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.benefit-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-icon {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.benefit-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.outgrower-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.outgrower-stat {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.outgrower-stat .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.outgrower-stat .stat-label {
+    font-size: 1.1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sustainability Certifications Section */
+.sustainability-certifications-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.certification-item {
+    background-color: var(--neutral-light);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-green);
+}
+
+.certification-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.certification-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.certification-item h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.certification-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Community Stories Section */
+.community-stories-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.story-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-image img {
+    transform: scale(1.1);
+}
+
+.story-content {
+    padding: 2rem;
+}
+
+.story-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+}
+
+.story-meta {
+    font-size: 0.9rem;
+    color: var(--highlight);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Impact Metrics Section */
+.impact-metrics-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-metrics-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.impact-metrics-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.impact-metrics-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.85), rgba(45, 90, 74, 0.9));
+    z-index: 2;
+}
+
+.metrics-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.impact-metrics-section .section-header {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    text-align: center;
+}
+
+.impact-metrics-section .section-header h2 {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.impact-metrics-section .section-header p {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.metric-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.metric-icon {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metric-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Future Goals Section */
+.future-goals-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.goals-content {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.goal-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--neutral-light);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--highlight);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-soft);
+}
+
+.goal-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: var(--heading-font);
+    line-height: 1;
+}
+
+.goal-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-green);
+}
+
+.goal-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* CTA Section */
+.sustainability-cta-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.sustainability-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sustainability-cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.sustainability-cta-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.sustainability-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .sustainability-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .sustainability-hero-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .practice-item {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .practice-item.reverse {
+        direction: ltr;
+    }
+    
+    .practice-image img {
+        max-height: 300px;
+    }
+    
+    .outgrower-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .outgrower-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .goal-item {
+        grid-template-columns: 60px 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .sustainability-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .sustainability-hero-title {
+        font-size: 2rem;
+    }
+    
+    .sustainability-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .sustainability-intro-content h2 {
+        font-size: 2rem;
+    }
+    
+    .sustainability-intro-content .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .image-break-section {
+        padding: 2rem 0;
+    }
+    
+    .image-break-content img {
+        max-height: 300px;
+    }
+    
+    .approach-card {
+        padding: 2rem;
+    }
+    
+    .practice-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .goal-item {
+        grid-template-columns: 50px 1fr;
+        padding: 1.5rem;
+    }
+    
+    .goal-number {
+        font-size: 2.5rem;
+    }
+    
+    .sustainability-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .sustainability-cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .sustainability-cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sustainability-hero {
+        height: 45vh;
+        min-height: 250px;
+    }
+    
+    .sustainability-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .approach-card,
+    .benefit-card,
+    .certification-item {
+        padding: 1.5rem;
+    }
+    
+    .story-content {
+        padding: 1.5rem;
+    }
+    
+    .metric-card {
+        padding: 2rem;
+    }
+    
+    .metric-number {
+        font-size: 2.5rem;
+    }
+    
+    .image-break-content img {
+        max-height: 250px;
+    }
+    
+    .practice-image img {
+        max-height: 250px;
+    }
+}
+

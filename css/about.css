@@ -1,0 +1,749 @@
+/* About Page Specific Styles */
+
+/* About Hero Section */
+.about-hero {
+    height: 60vh;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.about-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.about-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.559), rgba(45, 90, 74, 0.613));
+    z-index: 2;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    padding: 2rem 1.5rem;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.about-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Overview Section */
+.overview-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Desktop: Row 1 - Content left, Image right */
+.overview-text-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.overview-image-1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Desktop: Row 2 - Image left, Content right */
+.overview-image-2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.overview-text-2 {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 0; /* Remove bottom margin to eliminate gap with text-3 */
+    margin-top: 0; /* Reset margin since it's side-by-side with image */
+}
+
+.overview-text-2 p {
+    margin-bottom: 0; /* Remove paragraph margin to eliminate gap */
+}
+
+.overview-text-3 {
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: -3rem; /* Remove gap completely - paragraphs appear as one continuous text */
+}
+
+.overview-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.overview-text-block .lead-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-weight: 500;
+    color: var(--primary-green);
+}
+
+.overview-text-block p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.overview-image-block {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.overview-image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.mission-card,
+.vision-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.mission-icon,
+.vision-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Values Section */
+.values-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background-color: var(--neutral-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--highlight);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    background-color: var(--white);
+}
+
+.value-icon {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.value-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-green);
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.certifications-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.certifications-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.certifications-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.85), rgba(45, 90, 74, 0.9));
+    z-index: 2;
+}
+
+.certifications-section .container {
+    position: relative;
+    z-index: 3;
+}
+
+.certifications-section .section-header h2 {
+    color: var(--white);
+}
+
+.certifications-section .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.certification-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    background-color: var(--white);
+}
+
+.certification-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.certification-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.certification-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Impact Section */
+.impact-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.impact-stat {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--highlight);
+}
+
+.impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.impact-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    font-family: var(--heading-font);
+}
+
+.impact-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+}
+
+.impact-stat p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.why-choose-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--neutral-light);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    background-color: var(--white);
+}
+
+.why-choose-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: var(--heading-font);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.why-choose-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-green);
+}
+
+.why-choose-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* About CTA Section */
+.about-cta-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+    color: var(--primary-green);
+}
+
+.about-cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.about-cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 194, 95, 0.955); /* #f7c35f with opacity */
+    z-index: 2;
+}
+
+.about-cta-section .container {
+    position: relative;
+    z-index: 3;
+}
+
+.about-cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.about-cta-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color:var(--primary-green);
+}
+
+.about-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-cta-buttons .btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.about-cta-buttons .btn-primary:hover {
+    background-color: var(--white);
+    color: var(--primary-green);
+}
+
+.about-cta-buttons .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.about-cta-buttons .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-green);
+}
+
+/* Responsive Styles for About Page */
+@media (max-width: 1200px) {
+    .about-hero-content {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-hero {
+        height: 50vh;
+        min-height: 350px;
+        margin-top: 0;
+    }
+    
+    .about-hero-content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 1.5rem 1rem;
+    }
+    
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    /* Remove grid positioning on mobile - natural order: content-image-content-image-content */
+    .overview-text-1,
+    .overview-image-1,
+    .overview-text-2,
+    .overview-image-2,
+    .overview-text-3 {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 0; /* Reset negative margin on mobile */
+    }
+    
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        height: 40vh;
+        min-height: 250px;
+        margin-top: 0;
+    }
+    
+    .about-hero-content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+    }
+    
+    .about-hero-title {
+        font-size: 2rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Remove grid positioning on mobile - natural order: content-image-content-image-content */
+    .overview-text-1,
+    .overview-image-1,
+    .overview-text-2,
+    .overview-image-2,
+    .overview-text-3 {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 0; /* Reset negative margin on mobile */
+    }
+    
+    .lead-text {
+        font-size: 1.05rem;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 2rem;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-card {
+        padding: 2rem;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-number {
+        font-size: 2.5rem;
+    }
+    
+    .why-choose-item {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .why-choose-number {
+        font-size: 2.5rem;
+    }
+    
+    .about-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .about-cta-content p {
+        font-size: 1rem;
+    }
+    
+    .about-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .about-hero-content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0.75rem 0.5rem;
+        max-width: 100%;
+    }
+    
+    .about-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+    
+    /* Remove grid positioning on small mobile - natural order: content-image-content-image-content */
+    .overview-text-1,
+    .overview-image-1,
+    .overview-text-2,
+    .overview-image-2,
+    .overview-text-3 {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 0; /* Reset negative margin on mobile */
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 1.5rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem;
+    }
+    
+    .certification-card {
+        padding: 1.5rem;
+    }
+    
+    .impact-stat {
+        padding: 2rem;
+    }
+    
+    .impact-number {
+        font-size: 2rem;
+    }
+    
+    .why-choose-item {
+        padding: 1.25rem;
+    }
+    
+    .why-choose-number {
+        font-size: 2rem;
+    }
+    
+    .about-cta-content h2 {
+        font-size: 1.75rem;
+    }
+}
+

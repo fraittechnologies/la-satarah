@@ -1,0 +1,1477 @@
+/* Partnerships Page Specific Styles */
+
+/* Partnerships Hero Section */
+.partnerships-hero {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.partnerships-hero .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.partnerships-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.partnerships-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 100%;
+}
+
+.partnerships-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.6), rgba(45, 90, 74, 0.7));
+    z-index: 2;
+    min-height: 100%;
+}
+
+.partnerships-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.partnerships-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.partnerships-hero-title .no-break {
+    white-space: nowrap;
+}
+
+.partnerships-hero-subtitle {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Executive Summary Section */
+.executive-summary-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.executive-summary-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.executive-summary-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+}
+
+.executive-summary-content .lead-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--primary-green);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.executive-summary-content p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Funding Opportunity Section */
+.funding-opportunity-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.funding-opportunity-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+    opacity: 0.3;
+}
+
+.funding-opportunity-card {
+    position: relative;
+    z-index: 1;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.funding-icon {
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-green);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.funding-content {
+    flex: 1;
+}
+
+.funding-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.funding-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.funding-amount-usd {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.funding-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.funding-description strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.funding-benefits {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.funding-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.funding-benefit-item svg {
+    color: var(--highlight);
+    flex-shrink: 0;
+}
+
+.funding-cta {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Why Partner Section */
+.why-partner-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.why-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.why-partner-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--highlight);
+}
+
+.why-partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.partner-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.why-partner-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.why-partner-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Image Break Section */
+.image-break-section {
+    padding: 3rem 0;
+    background-color: var(--neutral-light);
+}
+
+.image-break-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.image-break-content img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    display: block;
+}
+
+/* Market Analysis Section */
+.market-analysis-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.market-content {
+    margin-top: 3rem;
+}
+
+.market-header {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.market-header h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-green);
+}
+
+.market-header .lead-text {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--primary-green);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.market-visual-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.market-map-wrapper {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    height: 100%;
+    min-height: 400px;
+}
+
+.market-map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.market-map-wrapper:hover .market-map-image {
+    transform: scale(1.05);
+}
+
+.market-map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(45, 90, 74, 0.9), rgba(45, 90, 74, 0.7), transparent);
+    padding: 2rem;
+    color: var(--white);
+}
+
+.map-overlay-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.map-overlay-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.market-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.market-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.market-text strong {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.market-stat-card {
+    background-color: var(--neutral-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-green);
+}
+
+.market-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.market-stat-card .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.market-stat-card .stat-label {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.market-stat-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Marketing Strategy Section */
+.marketing-strategy-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.strategy-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--highlight);
+}
+
+.strategy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.strategy-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.strategy-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.strategy-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.strategy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strategy-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(45, 90, 74, 0.1);
+}
+
+.strategy-list li:last-child {
+    border-bottom: none;
+}
+
+.strategy-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Financial Projections Section */
+.financial-projections-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.financial-projections-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.financial-projections-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.financial-projections-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(45, 90, 74, 0.85), rgba(45, 90, 74, 0.9));
+    z-index: 2;
+}
+
+.financial-content {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+}
+
+.financial-projections-section .section-header {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    text-align: center;
+}
+
+.financial-projections-section .section-header h2 {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.financial-projections-section .section-header p {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.financial-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.financial-intro .lead-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.financial-currency {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Financial Plan Details */
+.financial-plan-details {
+    margin: 3rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.financial-plan-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.financial-plan-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.financial-plan-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.production-targets {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.target-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.target-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.target-value {
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.existing-funding p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+}
+
+.existing-funding strong {
+    color: var(--highlight);
+    font-weight: 700;
+}
+
+.funding-total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+}
+
+.funding-total strong {
+    color: var(--highlight);
+    font-size: 1.3rem;
+}
+
+/* Financial Projections Table */
+.financial-projections-table-wrapper {
+    margin-top: 3rem;
+}
+
+.financial-projections-table-wrapper h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.table-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.financial-table-container {
+    overflow-x: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.financial-projections-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    color: var(--white);
+    min-width: 600px;
+}
+
+.financial-projections-table thead {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.financial-projections-table th {
+    padding: 1.25rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.financial-projections-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.financial-projections-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.financial-projections-table tbody tr {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.financial-projections-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.financial-projections-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.financial-projections-table td {
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.financial-projections-table td strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.financial-projections-table td:first-child {
+    font-weight: 600;
+}
+
+.financial-projections-table td:last-child {
+    color: var(--highlight);
+    font-weight: 700;
+}
+
+.financial-projections-table .revenue-cell {
+    font-weight: 700;
+    color: var(--highlight);
+}
+
+.financial-projections-table .margin-cell {
+    color: var(--highlight);
+    font-weight: 700;
+}
+
+.financial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.financial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.financial-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.financial-icon {
+    color: var(--highlight);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.financial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.financial-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-item.highlight {
+    padding-top: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: var(--heading-font);
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.financial-benefits {
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.financial-benefits h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.benefit-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Partnership Types Section */
+.partnership-types-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.partnership-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.partnership-type-card {
+    background-color: var(--neutral-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-green);
+}
+
+.partnership-type-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.type-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.partnership-type-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.partnership-type-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.partnership-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.partnership-features li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(45, 90, 74, 0.1);
+}
+
+.partnership-features li:last-child {
+    border-bottom: none;
+}
+
+.partnership-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Success Stories Section */
+.success-stories-section {
+    padding: var(--section-padding);
+    background-color: var(--neutral-light);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--highlight);
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.story-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+}
+
+.story-meta {
+    font-size: 0.9rem;
+    color: var(--highlight);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.story-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Partnerships CTA Section */
+.partnerships-cta-section {
+    padding: var(--section-padding);
+    background-color: var(--white);
+}
+
+.partnerships-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.partnerships-cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.partnerships-cta-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.partnerships-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.cta-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(45, 90, 74, 0.2);
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.cta-feature svg {
+    color: var(--highlight);
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .partnerships-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .partnerships-hero-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .funding-opportunity-card {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+    
+    .funding-icon {
+        margin: 0 auto;
+    }
+    
+    .funding-content {
+        text-align: center;
+    }
+    
+    .funding-benefits {
+        justify-content: center;
+    }
+    
+    .why-partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .market-visual-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .market-map-wrapper {
+        min-height: 350px;
+        order: 1;
+    }
+    
+    .market-text {
+        order: 2;
+    }
+    
+    .market-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .financial-plan-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .financial-projections-table-wrapper h3 {
+        font-size: 1.75rem;
+    }
+    
+    .financial-table-container {
+        padding: 0.5rem;
+    }
+    
+    .financial-projections-table {
+        font-size: 0.9rem;
+    }
+    
+    .financial-projections-table th,
+    .financial-projections-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .financial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partnership-types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .partnerships-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .partnerships-hero-title {
+        font-size: 2rem;
+    }
+    
+    .partnerships-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .executive-summary-content h2 {
+        font-size: 2rem;
+    }
+    
+    .executive-summary-content .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .funding-opportunity-card {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .funding-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    
+    .funding-content h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .funding-amount {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .funding-amount-usd {
+        font-size: 1.1rem;
+    }
+    
+    .funding-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .funding-benefits {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .funding-benefit-item {
+        justify-content: center;
+    }
+    
+    .funding-cta {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    .why-partner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-header h3 {
+        font-size: 1.75rem;
+    }
+    
+    .market-header .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .market-visual-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .market-map-wrapper {
+        min-height: 300px;
+        order: 1;
+    }
+    
+    .market-map-overlay {
+        padding: 1.5rem;
+    }
+    
+    .map-overlay-content h4 {
+        font-size: 1.25rem;
+    }
+    
+    .map-overlay-content p {
+        font-size: 0.9rem;
+    }
+    
+    .market-text {
+        order: 2;
+    }
+    
+    .market-text p {
+        font-size: 1rem;
+    }
+    
+    .market-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-break-section {
+        padding: 2rem 0;
+    }
+    
+    .image-break-content img {
+        max-height: 300px;
+    }
+    
+    .why-partner-card,
+    .strategy-card,
+    .partnership-type-card,
+    .story-card {
+        padding: 2rem;
+    }
+    
+    .financial-plan-item {
+        padding: 1.5rem;
+    }
+    
+    .financial-plan-item h4 {
+        font-size: 1.25rem;
+    }
+    
+    .financial-projections-table-wrapper h3 {
+        font-size: 1.5rem;
+    }
+    
+    .table-description {
+        font-size: 0.95rem;
+    }
+    
+    .financial-projections-table {
+        min-width: 500px;
+        font-size: 0.85rem;
+    }
+    
+    .financial-projections-table th,
+    .financial-projections-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .financial-card {
+        padding: 2rem;
+    }
+    
+    .partnerships-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .partnerships-cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .partnerships-cta-buttons .btn {
+        width: 100%;
+    }
+    
+    .cta-features {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .partnerships-hero {
+        height: 45vh;
+        min-height: 250px;
+    }
+    
+    .partnerships-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .funding-opportunity-section {
+        padding: 2rem 0;
+    }
+    
+    .funding-opportunity-card {
+        padding: 1.5rem;
+    }
+    
+    .funding-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .funding-amount {
+        font-size: 1.75rem;
+    }
+    
+    .funding-amount-usd {
+        font-size: 1rem;
+    }
+    
+    .funding-description {
+        font-size: 0.95rem;
+    }
+    
+    .why-partner-card,
+    .strategy-card,
+    .partnership-type-card,
+    .story-card,
+    .financial-card,
+    .benefit-item {
+        padding: 1.5rem;
+    }
+    
+    .market-stat-card {
+        padding: 2rem;
+    }
+    
+    .market-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .market-header .lead-text {
+        font-size: 1rem;
+    }
+    
+    .market-map-wrapper {
+        min-height: 250px;
+    }
+    
+    .market-map-overlay {
+        padding: 1rem;
+    }
+    
+    .map-overlay-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .map-overlay-content p {
+        font-size: 0.85rem;
+    }
+    
+    .market-text p {
+        font-size: 0.95rem;
+    }
+    
+    .market-stat-card .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .image-break-content img {
+        max-height: 250px;
+    }
+    
+    .financial-card .metric-value {
+        font-size: 1.25rem;
+    }
+    
+    .financial-plan-item {
+        padding: 1.25rem;
+    }
+    
+    .financial-plan-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .target-value {
+        font-size: 1rem;
+    }
+    
+    .existing-funding p {
+        font-size: 0.9rem;
+    }
+    
+    .financial-projections-table-wrapper h3 {
+        font-size: 1.25rem;
+    }
+    
+    .table-description {
+        font-size: 0.9rem;
+    }
+    
+    .financial-projections-table {
+        min-width: 400px;
+        font-size: 0.8rem;
+    }
+    
+    .financial-projections-table th {
+        padding: 0.75rem 0.4rem;
+        font-size: 0.75rem;
+    }
+    
+    .financial-projections-table td {
+        padding: 0.75rem 0.4rem;
+        font-size: 0.8rem;
+    }
+}
+
