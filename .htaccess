@@ -4,6 +4,16 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Remove .html extension from URLs
+# External redirect from /page.html to /page
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Internal rewrite from /page to /page.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
 # Force WWW to Non-WWW (or vice versa - adjust as needed)
 # Uncomment the following lines if you want to redirect www to non-www
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

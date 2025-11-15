@@ -505,17 +505,27 @@
     }
     
     .product-detail-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 2.5rem;
         padding: 2rem;
     }
     
+    /* Ensure all product cards have image first, content second on mobile */
+    .product-detail-card .product-detail-image {
+        order: 1 !important;
+    }
+    
+    .product-detail-card .product-detail-content {
+        order: 2 !important;
+    }
+    
+    /* Override reverse class on mobile to maintain consistent layout */
     .product-detail-card.reverse .product-detail-image {
-        order: 1;
+        order: 1 !important;
     }
     
     .product-detail-card.reverse .product-detail-content {
-        order: 2;
+        order: 2 !important;
     }
     
     .product-detail-image {
@@ -631,8 +641,26 @@
     }
     
     .product-detail-card {
+        grid-template-columns: 1fr;
         padding: 1.5rem;
         margin-bottom: 3rem;
+    }
+    
+    /* Ensure consistent image-first layout on mobile */
+    .product-detail-card .product-detail-image {
+        order: 1 !important;
+    }
+    
+    .product-detail-card .product-detail-content {
+        order: 2 !important;
+    }
+    
+    .product-detail-card.reverse .product-detail-image {
+        order: 1 !important;
+    }
+    
+    .product-detail-card.reverse .product-detail-content {
+        order: 2 !important;
     }
     
     .product-detail-image {
@@ -780,8 +808,26 @@
     }
     
     .product-detail-card {
+        grid-template-columns: 1fr;
         padding: 1.25rem;
         margin-bottom: 2.5rem;
+    }
+    
+    /* Ensure consistent image-first layout on small mobile */
+    .product-detail-card .product-detail-image {
+        order: 1 !important;
+    }
+    
+    .product-detail-card .product-detail-content {
+        order: 2 !important;
+    }
+    
+    .product-detail-card.reverse .product-detail-image {
+        order: 1 !important;
+    }
+    
+    .product-detail-card.reverse .product-detail-content {
+        order: 2 !important;
     }
     
     .product-detail-image {

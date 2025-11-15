@@ -577,24 +577,41 @@
 
 @media (max-width: 767px) {
     .about-hero {
-        height: 40vh;
-        min-height: 250px;
+        height: auto;
+        min-height: 350px;
         margin-top: 0;
+        padding: 2rem 0;
+        overflow: visible;
+    }
+    
+    .about-hero-overlay {
+        background: linear-gradient(rgba(45, 90, 74, 0.7), rgba(45, 90, 74, 0.75));
     }
     
     .about-hero-content {
         margin-left: 0;
-        margin-top: 0;
-        padding: 1rem 0.75rem;
+        margin-top: 3rem;
+        padding: 2rem 1.5rem;
         max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
     
     .about-hero-title {
         font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .about-hero-subtitle {
         font-size: 1rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0;
     }
     
     .overview-content {
@@ -678,23 +695,40 @@
 
 @media (max-width: 480px) {
     .about-hero {
-        height: 40vh;
-        min-height: 250px;
+        height: auto;
+        min-height: 300px;
+        padding: 1.5rem 0;
+        overflow: visible;
+    }
+    
+    .about-hero-overlay {
+        background: linear-gradient(rgba(45, 90, 74, 0.7), rgba(45, 90, 74, 0.75));
     }
     
     .about-hero-content {
         margin-left: 0;
-        margin-top: 0;
-        padding: 0.75rem 0.5rem;
+        margin-top: 2.5rem;
+        padding: 1.5rem 1rem;
         max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
     
     .about-hero-title {
         font-size: 1.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.875rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .about-hero-subtitle {
         font-size: 0.95rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0;
     }
     
     .overview-content {

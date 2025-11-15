@@ -338,6 +338,11 @@ span.nav-link:hover {
     white-space: nowrap;
 }
 
+/* Mobile Get In Touch Button - Hidden by default on desktop */
+.mobile-get-in-touch {
+    display: none;
+}
+
 .btn-get-in-touch:hover {
     background-color: var(--primary-green);
     color: var(--white);

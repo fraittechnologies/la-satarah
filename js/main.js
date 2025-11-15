@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initHeroSlider();
     setActiveNavLink();
+    initContactForm();
 });
 
 // Mobile Menu Toggle Functionality
@@ -57,6 +58,15 @@ function initMobileMenu() {
                 });
             }
         });
+        
+        // Close menu when clicking on mobile Get In Touch button
+        const mobileGetInTouchBtn = document.querySelector('.btn-get-in-touch-mobile');
+        if (mobileGetInTouchBtn) {
+            mobileGetInTouchBtn.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        }
     }
 }
 
@@ -66,22 +76,29 @@ function initDropdowns() {
     
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('.nav-link');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        // Check if dropdown has menu items (not empty)
+        const hasMenuItems = dropdownMenu && dropdownMenu.querySelectorAll('li').length > 0;
         
         if (link) {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 991) {
-                    // Only prevent default if it's an anchor tag
-                    if (link.tagName === 'A') {
+                    // Only prevent default and toggle dropdown if menu has items
+                    // If no menu items, allow normal navigation
+                    if (hasMenuItems && link.tagName === 'A') {
                         e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        });
                     }
-                    dropdown.classList.toggle('active');
-                    
-                    // Close other dropdowns
-                    dropdowns.forEach(otherDropdown => {
-                        if (otherDropdown !== dropdown) {
-                            otherDropdown.classList.remove('active');
-                        }
-                    });
+                    // If no menu items or not an anchor tag, allow normal behavior
+                    // (link will navigate normally)
                 }
             });
         }
@@ -212,21 +229,21 @@ function initCarousel() {
             name: 'Coriander',
             category: 'open-field',
             description: 'Fresh coriander with citrusy, slightly sweet leaves and aromatic seeds.',
-            image: 'images/coriander.jpg'
+            image: 'images/Coriander.jpg'
         },
         {
             id: 11,
             name: 'Sage',
             category: 'open-field',
             description: 'Earthy sage with velvety leaves and a warm, slightly peppery flavor.',
-            image: 'images/sage.jpg'
+            image: 'images/Sage.jpg'
         },
         {
             id: 12,
             name: 'Marjoram',
             category: 'open-field',
             description: 'Sweet marjoram with a delicate, floral flavor and mild oregano-like taste.',
-            image: 'images/marjoram.jpg'
+            image: 'images/Marjoram.jpg'
         }
     ];
     
@@ -510,4 +527,109 @@ function setActiveNavLink() {
             link.classList.add('active');
         }
     });
+}
+
+// Contact Form Submission Handler
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (!contactForm) return;
+    
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form elements
+        const submitButton = contactForm.querySelector('.btn-submit');
+        const originalButtonText = submitButton.innerHTML;
+        
+        // Get form data
+        const formData = {
+            'first-name': document.getElementById('first-name').value.trim(),
+            'last-name': document.getElementById('last-name').value.trim(),
+            'email': document.getElementById('email').value.trim(),
+            'phone': document.getElementById('phone').value.trim(),
+            'subject': document.getElementById('subject').value,
+            'message': document.getElementById('message').value.trim()
+        };
+        
+        // Validate required fields
+        if (!formData['first-name'] || !formData['last-name'] || !formData['email'] || !formData['subject'] || !formData['message']) {
+            showFormMessage('Please fill in all required fields.', 'error');
+            return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showFormMessage('Please enter a valid email address.', 'error');
+            return;
+        }
+        
+        // Disable submit button and show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+        
+        try {
+            // Send form data to PHP backend
+            const formDataToSend = new FormData();
+            Object.keys(formData).forEach(key => {
+                formDataToSend.append(key, formData[key]);
+            });
+            
+            const response = await fetch('send-email.php', {
+                method: 'POST',
+                body: formDataToSend
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                // Show success message
+                showFormMessage(result.message, 'success');
+                
+                // Reset form
+                contactForm.reset();
+            } else {
+                // Show error message
+                showFormMessage(result.message || 'Sorry, there was an error sending your message. Please try again later or contact us directly at info@lasatarah.co.ke', 'error');
+            }
+            
+        } catch (error) {
+            console.error('Form submission failed:', error);
+            showFormMessage('Sorry, there was an error sending your message. Please try again later or contact us directly at info@lasatarah.co.ke', 'error');
+        } finally {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+        }
+    });
+}
+
+// Show form message (success or error)
+function showFormMessage(message, type) {
+    // Remove any existing message
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message form-message-${type}`;
+    messageDiv.textContent = message;
+    
+    // Insert message before submit button
+    const contactForm = document.getElementById('contact-form');
+    const submitButton = contactForm.querySelector('.btn-submit');
+    contactForm.insertBefore(messageDiv, submitButton);
+    
+    // Scroll to message
+    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
+    }
 }

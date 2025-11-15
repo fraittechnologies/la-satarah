@@ -21,6 +21,16 @@
     .footer-logo {
         max-width: 300px;
     }
+    
+    /* Hide mobile Get In Touch button on desktop */
+    .mobile-get-in-touch {
+        display: none !important;
+    }
+    
+    /* Show desktop Get In Touch button on desktop */
+    .btn-get-in-touch {
+        display: flex !important;
+    }
 }
 
 /* Medium devices (tablets, 768px to 991px) */
@@ -36,11 +46,17 @@
     
     .nav-menu {
         position: fixed;
-        top: 10px;
+        top: 0;
         left: -100%;
         width: 80%;
         max-width: 350px;
-        height: calc(100vh - 70px);
+        min-width: 280px;
+        height: 100vh;
+        max-height: 100vh;
+        background-image: url('../images/popup_image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-color: var(--white);
         flex-direction: column;
         align-items: flex-start;
@@ -51,8 +67,25 @@
         z-index: 1002;
         opacity: 0;
         overflow-y: auto;
+        overflow-x: hidden;
         box-sizing: border-box;
-        margin-top: -250px;
+        margin-top: 0;
+        padding-top: 80px;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    
+    .nav-menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.85);
+        z-index: 0;
+        border-radius: 0 20px 20px 0;
+        pointer-events: none;
     }
     
     .nav-menu.active {
@@ -63,6 +96,8 @@
     .nav-item {
         margin: 0 0 0.5rem 0;
         width: 100%;
+        position: relative;
+        z-index: 1;
     }
     
     .nav-link {
@@ -71,6 +106,8 @@
         width: 100%;
         text-align: left;
         font-size: 0.9rem;
+        position: relative;
+        z-index: 1;
     }
     
     .dropdown-menu {
@@ -200,6 +237,11 @@
         transform: translateY(-50%) rotate(180deg);
     }
     
+    /* Mobile-only Get In Touch Button */
+    .mobile-get-in-touch {
+        display: none;
+    }
+    
     .mobile-toggle {
         display: flex;
     }
@@ -280,6 +322,10 @@
         word-wrap: break-word;
     }
     
+    .footer-bottom p .no-break {
+        white-space: nowrap;
+    }
+    
     .designer-link {
         font-size: 0.9rem;
     }
@@ -333,13 +379,38 @@
     }
     
     .nav-menu {
-        top: 60px;
-        height: calc(100vh - 60px);
+        top: 0;
+        height: 100vh;
+        max-height: 100vh;
         padding: 0.75rem 0.75rem 1rem;
+        padding-top: 70px;
+        background-image: url('../images/popup_image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-color: var(--white);
         width: 85%;
         max-width: 320px;
+        min-width: 260px;
         box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    
+    .nav-menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.85);
+        z-index: 0;
+        border-radius: 0 20px 20px 0;
+        pointer-events: none;
     }
     
     .mobile-toggle {
@@ -347,31 +418,86 @@
     }
     
     /* Ensure nav items are readable */
+    .nav-item {
+        margin-bottom: 0.4rem;
+        position: relative;
+        z-index: 1;
+    }
+    
     .nav-item .nav-link {
         color: var(--neutral-dark);
         font-weight: 600;
         font-size: 0.85rem;
         padding: 0.4rem 0.75rem;
+        position: relative;
+        z-index: 1;
     }
     
-    .nav-item {
-        margin-bottom: 0.4rem;
+    /* Mobile-only Get In Touch Button */
+    .mobile-get-in-touch {
+        display: block;
+        margin-top: 0.5rem;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .btn-get-in-touch-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--primary-green);
+        color: var(--white);
+        padding: 0.875rem 1.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin: 0.5rem 0;
+        box-shadow: 0 4px 12px rgba(45, 90, 74, 0.2);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .btn-get-in-touch-mobile:hover {
+        background-color: var(--secondary-green);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(45, 90, 74, 0.3);
+    }
+    
+    .btn-get-in-touch-mobile .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .btn-get-in-touch-mobile:hover .arrow-icon {
+        transform: translate(3px, -3px);
     }
     
     .dropdown-menu {
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
         padding: 0.2rem 0;
+        background-color: rgba(247, 195, 95, 0.3);
+        position: relative;
+        z-index: 2;
+        width: calc(100% - 0.75rem);
+        margin-left: 0.75rem;
     }
     
     .dropdown-menu a {
         padding: 0.4rem 1rem;
         font-size: 0.8rem;
+        position: relative;
+        z-index: 2;
     }
     
-    .dropdown-menu {
-        width: calc(100% - 0.75rem);
-        margin-left: 0.75rem;
+    .dropdown-menu li {
+        position: relative;
+        z-index: 2;
     }
     
     .hero {
@@ -546,6 +672,10 @@
         display: block;
     }
     
+    .footer-bottom p .no-break {
+        white-space: nowrap;
+    }
+    
     .designer-link {
         font-size: 0.85rem;
         display: inline;
@@ -576,8 +706,18 @@
     .nav-menu {
         width: 90%;
         max-width: 300px;
+        min-width: 240px;
         padding: 0.5rem 0.75rem 0.75rem;
+        padding-top: 65px;
         box-sizing: border-box;
+        top: 0;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
     
     .hero {
@@ -699,6 +839,10 @@
         padding: 0 0.5rem;
         word-wrap: break-word;
         display: block;
+    }
+    
+    .footer-bottom p .no-break {
+        white-space: nowrap;
     }
     
     .designer-link {

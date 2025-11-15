@@ -1073,12 +1073,109 @@
 
 /* Responsive Design */
 @media (max-width: 991px) {
+    /* Remove dropdown arrow from Partnerships nav item in mobile menu */
+    /* Remove arrow from Partnerships link - works even if dropdown class is present */
+    .nav-item:has(a[href="partnerships.html"]) .nav-link::after,
+    .nav-item:has(a[href*="partnerships.html"]) .nav-link::after,
+    .nav-item.dropdown:has(a[href="partnerships.html"]) .nav-link::after,
+    .nav-item.dropdown:has(a[href*="partnerships.html"]) .nav-link::after,
+    a[href="partnerships.html"]::after,
+    a[href*="partnerships.html"]::after {
+        display: none !important;
+        content: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        border: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    /* Remove extra padding that might be added for dropdown arrows */
+    .nav-item:has(a[href="partnerships.html"]) .nav-link,
+    .nav-item:has(a[href*="partnerships.html"]) .nav-link,
+    .nav-item.dropdown:has(a[href="partnerships.html"]) .nav-link,
+    .nav-item.dropdown:has(a[href*="partnerships.html"]) .nav-link,
+    a[href="partnerships.html"],
+    a[href*="partnerships.html"] {
+        padding-right: 1rem !important;
+    }
+    
+    /* Hide empty dropdown menu for Partnerships if it exists */
+    .nav-item:has(a[href="partnerships.html"]) .dropdown-menu:empty,
+    .nav-item:has(a[href*="partnerships.html"]) .dropdown-menu:empty,
+    .nav-item.dropdown:has(a[href="partnerships.html"]) .dropdown-menu:empty,
+    .nav-item.dropdown:has(a[href*="partnerships.html"]) .dropdown-menu:empty {
+        display: none !important;
+    }
+    
+    /* Alternative selectors for browsers that don't support :has() */
+    .nav-menu .nav-item a[href="partnerships.html"]::after,
+    .nav-menu .nav-item a[href*="partnerships.html"]::after,
+    .nav-menu .nav-item.dropdown a[href="partnerships.html"]::after,
+    .nav-menu .nav-item.dropdown a[href*="partnerships.html"]::after {
+        display: none !important;
+        content: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        border: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    .nav-menu .nav-item a[href="partnerships.html"],
+    .nav-menu .nav-item a[href*="partnerships.html"],
+    .nav-menu .nav-item.dropdown a[href="partnerships.html"],
+    .nav-menu .nav-item.dropdown a[href*="partnerships.html"] {
+        padding-right: 1rem !important;
+    }
+    
+    .partnerships-hero {
+        height: auto;
+        min-height: 65vh;
+        padding: 90px 0 2rem 0;
+        overflow: visible;
+    }
+    
+    .partnerships-hero-background,
+    .partnerships-hero-overlay {
+        min-height: 100%;
+        height: 100%;
+    }
+    
+    .partnerships-hero .container {
+        align-items: flex-start;
+        padding-top: 2.5rem;
+        height: auto;
+    }
+    
+    .partnerships-hero-content {
+        padding-top: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
     .partnerships-hero-title {
         font-size: 2.5rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .partnerships-hero-title .no-break {
+        white-space: nowrap;
     }
     
     .partnerships-hero-subtitle {
         font-size: 1.15rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .funding-opportunity-card {
@@ -1167,16 +1264,69 @@
 
 @media (max-width: 767px) {
     .partnerships-hero {
-        height: 50vh;
-        min-height: 300px;
+        height: auto;
+        min-height: 60vh;
+        padding: 80px 0 2rem 0;
+        overflow: visible;
+    }
+    
+    .partnerships-hero-background {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .partnerships-hero-overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .partnerships-hero .container {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        height: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .partnerships-hero-content {
+        padding-top: 1.5rem;
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .partnerships-hero-title {
         font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0;
+    }
+    
+    .partnerships-hero-title .no-break {
+        white-space: normal;
     }
     
     .partnerships-hero-subtitle {
         font-size: 1rem;
+        line-height: 1.6;
+        padding: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin-bottom: 0;
     }
     
     .executive-summary-content h2 {
@@ -1348,12 +1498,68 @@
 
 @media (max-width: 480px) {
     .partnerships-hero {
-        height: 45vh;
-        min-height: 250px;
+        height: auto;
+        min-height: 55vh;
+        padding: 70px 0 1.5rem 0;
+        overflow: visible;
+    }
+    
+    .partnerships-hero-background {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .partnerships-hero-overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+    
+    .partnerships-hero .container {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        height: auto;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .partnerships-hero-content {
+        padding-top: 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .partnerships-hero-title {
         font-size: 1.75rem;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0;
+    }
+    
+    .partnerships-hero-title .no-break {
+        white-space: normal;
+    }
+    
+    .partnerships-hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin-bottom: 0;
     }
     
     .funding-opportunity-section {
